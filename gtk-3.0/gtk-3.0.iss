@@ -1,12 +1,12 @@
 #define MyProjectName "GTK Windows pack"
 #define MyPackageName "GTK 3.0"
-#define MyAppName MyProjectName + " – " + MyPackageName
+#define MyAppName MyProjectName + " - " + MyPackageName + " 32 bit"
 #define MyAppVersion "1.0.0"
-#define MyAppPublisher "Vojtìch Perník"
-#define MyAppURL "https://pervoj.github.io/gtk-windows-pack"
+#define MyAppPublisher "Seiko Santana"
+#define MyAppURL "https://github.com/seikosantana/gtk-windows-pack"
 
 [Setup]
-AppId=GTKWindowsPack30
+AppId=GTKWindows32Pack30
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppVerName={#MyAppName}
@@ -14,8 +14,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-ArchitecturesInstallIn64BitMode=x64
-DefaultDirName={autopf64}\gtk-windows-pack\gtk-3.0
+DefaultDirName={autopf}\gtk-windows-pack\gtk-3.0
 DefaultGroupName={#MyProjectName}\{#MyPackageName}
 AllowNoIcons=yes
 AlwaysRestart=yes
@@ -76,8 +75,8 @@ Source: "rsc\types\pop-dark\themes\*"; DestDir: "{app}\share\themes"; Flags: rec
 Source: "rsc\types\pop-dark\icons\*"; DestDir: "{app}\share\icons"; Flags: recursesubdirs createallsubdirs; Components: theme\pop\dark
 
 [Registry]
-Root: HKLM64; Subkey: "SOFTWARE\GTK Windows pack"; Flags: uninsdeletekeyifempty
-Root: HKLM64; Subkey: "SOFTWARE\GTK Windows pack"; ValueType: string; ValueName: "GTK 3.0"; \
+Root: HKLM; Subkey: "SOFTWARE\GTK Windows pack"; Flags: uninsdeletekeyifempty
+Root: HKLM; Subkey: "SOFTWARE\GTK Windows pack"; ValueType: string; ValueName: "GTK 3.0"; \
     ValueData: "{#MyAppVersion}"; Flags: uninsdeletekey
 Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; \
     ValueType: expandsz; ValueName: "Path"; ValueData: "{app}\bin;{olddata}"
